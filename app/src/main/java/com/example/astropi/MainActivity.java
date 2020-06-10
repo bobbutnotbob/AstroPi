@@ -16,19 +16,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner aperture_dropdown = (Spinner) findViewById(R.id.aperture_dropdown);
-        Spinner exposure_dropdown = (Spinner) findViewById(R.id.exposure_dropdown);
-        Spinner iso_dropdown = (Spinner) findViewById(R.id.iso_dropdown);
+        final Spinner aperture_dropdown = (Spinner) findViewById(R.id.aperture_dropdown);
+        final Spinner exposure_dropdown = (Spinner) findViewById(R.id.exposure_dropdown);
+        final Spinner iso_dropdown = (Spinner) findViewById(R.id.iso_dropdown);
 
         final Button select_settings = findViewById(R.id.select_settings);
         select_settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (select_settings.getText() == "Testing 321") {
-                    select_settings.setText("Testing 123");
-                }else {
-                    select_settings.setText("Testing 321");
-                }
+                String result = aperture_dropdown.getSelectedItem().toString() + exposure_dropdown.getSelectedItem().toString() + iso_dropdown.getSelectedItem().toString();
+                select_settings.setText(result);
             }
         });
 
