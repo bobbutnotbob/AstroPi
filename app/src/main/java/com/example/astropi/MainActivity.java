@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar action_bar = findViewById(R.id.toolbar);
-        //setSupportActionBar(action_bar);
+        Toolbar action_bar = findViewById(R.id.action_bar);
+        setSupportActionBar(action_bar);
 
         final Spinner aperture_dropdown = findViewById(R.id.aperture_dropdown);
         final Spinner exposure_dropdown = findViewById(R.id.exposure_dropdown);
