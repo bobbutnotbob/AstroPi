@@ -1,13 +1,13 @@
 package com.example.astropi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Toolbar action_bar = findViewById(R.id.toolbar);
+        //setSupportActionBar(action_bar);
 
-        final Spinner aperture_dropdown = (Spinner) findViewById(R.id.aperture_dropdown);
-        final Spinner exposure_dropdown = (Spinner) findViewById(R.id.exposure_dropdown);
-        final Spinner iso_dropdown = (Spinner) findViewById(R.id.iso_dropdown);
+        final Spinner aperture_dropdown = findViewById(R.id.aperture_dropdown);
+        final Spinner exposure_dropdown = findViewById(R.id.exposure_dropdown);
+        final Spinner iso_dropdown = findViewById(R.id.iso_dropdown);
 
         final Button select_settings = findViewById(R.id.select_settings);
         select_settings.setOnClickListener(new View.OnClickListener() {
